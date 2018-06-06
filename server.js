@@ -1,11 +1,20 @@
 const express  = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const passport = require('passport');
 
 const users = require('./server/routes/api/users');
 const profiles = require('./server/routes/api/profiles');
 const posts = require('./server/routes/api/posts');
 
 const app = express();
+
+// Body parser middleware for retriving the email address
+app.use(bodyParser.urlencoded({
+    extended: false
+}))
+app.use(bodyParser.json());
+
 
 // DB configuration
 const bd = require('./config/keys').mongoURI;
@@ -16,9 +25,15 @@ mongoose
     .then(() => { console.log('Yes... MongoDB is connected');})
     .catch(err => { console.log(err);})
 
-app.get('/', (req, res) => {
-    res.send('hello Asit')}
-);
+// For test
+//app.get('/', (req, res) => {res.send('hello Asit')});
+
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport config
+require('./config/passport')(passport);
+
 
 // User Routes
 app.use('/api/users', users);
