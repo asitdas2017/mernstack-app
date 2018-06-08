@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import registerUser from '../../actions/authActions';
+import { registerUser } from '../../actions/authActions';
 
 class Register extends Component {
 
@@ -23,9 +23,9 @@ class Register extends Component {
     this.setState({[e.target.name]:e.target.value})
   }
 
-  componentWillReceiveProps(nextProps){
-    if(nextProps){
-      this.setState({errors: nextProps.errors});
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
     }
   }
 
@@ -40,19 +40,22 @@ class Register extends Component {
       password2: this.state.password2
     };
     this.props.registerUser(newUser, this.props.history);    
+    
     //console.log(newUser);
+    
   }
 
   render() {
 
-    const { errors } = this.state; //alternative :: const errors = this.state.errors;
-    const { user } = this.props.auth;
+    //const { errors } = this.state; //alternative :: const errors = this.state.errors;
+    const errors = this.state.errors;
+    //const { user } = this.props.auth;
 
     return (
       <div>
       <h2>Register</h2>
       <div className="row jumbotron">
-      {user ? user.name : null}
+      {/* {user ? user.name : null} */}
         <div className="col-sm-6">
           <form noValidate onSubmit={this.onSubmit}>
             <div className="form-group">
@@ -86,7 +89,7 @@ class Register extends Component {
 Register.propTypes = {
   registerUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  //errors: PropTypes.object.isRequired
 }
 
 const mapStatetoProps = (state) => ({
