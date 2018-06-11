@@ -4,7 +4,10 @@ export default class Footer extends Component {
   render() {
     return (
       <div>
-        Footer
+        <hr />
+        <footer>
+          <p>© 2018 Company, Inc.</p>
+        </footer>
       </div>
     )
   }
