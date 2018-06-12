@@ -6,7 +6,7 @@ export default class Footer extends Component {
       <div>
         <hr />
         <footer>
-          <p>© 2018 Company, Inc.</p>
+          <p>© 2018, Asit Das.</p>
         </footer>
       </div>
     )

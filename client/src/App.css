@@ -41,6 +41,41 @@
   padding-left: 15px;
 }
 
+/* Landing page banner */
+.landingBanner{
+  padding: 30px 40px;
+  background: #ddd;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.landingBanner img{
+  width: 50%;
+}
+.landingBanner h2{
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.landingBanner p{
+  margin-bottom: 0px;
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: 200;
+}
+
+/* Landing page Cards */
+.landingCards img{
+  margin-bottom: 15px;
+}
+.landingCards > .col-lg-3:nth-child(1) > img{width: 70%;}
+.landingCards > .col-lg-3:nth-child(2) > img{width: 55%; padding-top: 5px; padding-bottom: 2px;}
+.landingCards > .col-lg-3:nth-child(3) > img{width: 90%; padding-top: 6px; padding-bottom: 2px;}
+.landingCards > .col-lg-3:nth-child(4) > img{width: 55%; padding-bottom: 6px;}
+.landingCards p{
+  border-top: 0px solid red
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
