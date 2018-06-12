@@ -76,6 +76,12 @@
   border-top: 0px solid red
 }
 
+.innerJumbotron{
+  padding: 30px 40px;
+  background: #eee;
+  border-radius: 6px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

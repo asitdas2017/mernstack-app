@@ -53,8 +53,11 @@ class Login extends Component {
 
     return (
       <div>
-      <h2>Login</h2>
-      <div className="row jumbotron">
+        <div class="page-header">
+          <h2>Login</h2>
+        </div>
+      <div className="innerJumbotron">
+      <div className="row">
         <div className="col-sm-6">
           <form noValidate onSubmit={this.onSubmit}>
             <div className={classnames('form-group', {'has-error':errors.email})}>
@@ -73,6 +76,7 @@ class Login extends Component {
         <div className="col-sm-1"></div>
         <div className="col-sm-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
       </div>        
+      </div>
       </div>
     )
   }

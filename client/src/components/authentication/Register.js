@@ -62,8 +62,8 @@ class Register extends Component {
         <div class="page-header">
           <h2>Register</h2>
         </div>
-        
-        <div className="row jumbotron">
+        <div className="innerJumbotron">
+        <div className="row">
         {/* {user ? user.name : null} */}
           <div className="col-sm-6">
             <form noValidate onSubmit={this.onSubmit}>
@@ -91,8 +91,16 @@ class Register extends Component {
             </form>
           </div>
           <div className="col-sm-1"></div>
-          <div className="col-sm-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          <div className="col-sm-5">
+            User can register with their information.<br /><br /><br />
+
+            User can login with below user registered list:
+
+            <h4>asit.das@test.com/12345</h4>
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
         </div>
+      </div>
       </div>
     )
   }
